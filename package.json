@@ -1,0 +1,21 @@
+{
+  "name": "http-status-code-lookup",
+  "version": "0.0.1",
+  "description": "HTTP Status Code Lookup",
+  "main": "./js/index.js",
+  "typings": "./js/index.d.ts",
+  "scripts": {},
+  "keywords": [
+    "REST",
+    "API"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wchang28/http-status-code-lookup.git"
+  },
+  "author": "Wen Chang",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^6.0.73"
+  }
+}
