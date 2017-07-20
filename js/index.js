@@ -10,8 +10,12 @@ for (var code in http.STATUS_CODES) {
 }
 function lookup(status, defaultCode) {
     if (defaultCode === void 0) { defaultCode = 400; }
-    status = status.toLowerCase().replace(/ /gi, '-');
-    var code = lookupMapping[status];
-    return (code ? code : defaultCode);
+    if (status) {
+        status = status.toLowerCase().replace(/ /gi, '-');
+        var code = lookupMapping[status];
+        return (code ? code : defaultCode);
+    }
+    else
+        return defaultCode;
 }
 exports.lookup = lookup;

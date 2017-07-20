@@ -9,9 +9,12 @@ for (let code in http.STATUS_CODES) {
 }
 
 export function lookup(status: string, defaultCode: number = 400) : number {
-    status = status.toLowerCase().replace(/ /gi, '-');
-    let code = lookupMapping[status];
-    return (code ? code : defaultCode);
+    if (status) {
+        status = status.toLowerCase().replace(/ /gi, '-');
+        let code = lookupMapping[status];
+        return (code ? code : defaultCode);
+    } else
+        return defaultCode;
 }
 
 export {lookupMapping};
